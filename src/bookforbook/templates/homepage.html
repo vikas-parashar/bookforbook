@@ -1,0 +1,21 @@
+{% extends "site_base.html" %}
+
+{% block head_title %}Bookforbook{% endblock %}
+
+{% block body_class %}home{% endblock %}
+
+{% block body_base %}
+    <section class="jumbotron">
+        <div class="container">
+            {% include "_messages.html" %}
+            <h1>Welcome to<br>Bookforbook</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia deleniti consequatur minus doloribus ipsa esse mollitia, rem reiciendis molestias cumque molestiae officia tempore, accusamus provident id quis, velit porro animi.
+            </p>
+            {% if not user.is_authenticated %}
+                {% include "_social_login.html" %}
+            {% endif %}
+        </div>
+    </section>
+
+{% endblock %}
